@@ -2,7 +2,7 @@
 <html lang="en">
 	<!--begin::Head-->
 	<head><base href=""/>
-		<title>{{ config('matt.nama_app') }} - @yield('title')</title>
+		<title>@yield('title') - {{ config('matt.nama_app') }}</title>
 		<meta charset="utf-8" />
 		<meta name="description" content="Pregnant and many more about mom and baby health control app, here you can chekup whenever." />
 		<meta name="keywords" content="metronic, bootstrap, bootstrap 5, angular, VueJs, React, Asp.Net Core, Rails, Spring, Blazor, Django, Flask & Laravel starter kits, admin themes, web design, figma, web development, free templates, free admin themes, bootstrap theme, bootstrap template, bootstrap dashboard, bootstrap dak mode, bootstrap button, bootstrap datepicker, bootstrap timepicker, fullcalendar, datatables, flaticon" />
@@ -57,10 +57,10 @@
 						<!--end::Header mobile toggle-->
 						<!--begin::Logo-->
 						<div class="d-flex align-items-center flex-grow-1 flex-lg-grow-0 me-lg-15">
-							<a href="../../demo30/dist/index.html">
-								<img alt="Logo" src="{{ asset('assets/media/logos/demo30-small.svg') }}" class="h-25px d-sm-none" />
-								<img alt="Logo" src="{{ asset('assets/media/logos/demo30.svg') }}" class="h-25px d-none d-sm-inline app-sidebar-logo-default theme-light-show" />
-								<img alt="Logo" src="{{ asset('assets/media/logos/demo30-dark.png') }}" class="h-25px d-none d-sm-inline app-sidebar-logo-default theme-dark-show" />
+							<a href="#">
+								<img alt="Logo" src="{{ asset('assets/media/logos/cintaindo.png') }}" class="h-25px d-sm-none" />
+								<img alt="Logo" src="{{ asset('assets/media/logos/cintaindo.png') }}" class="h-25px d-none d-sm-inline app-sidebar-logo-default theme-light-show" />
+								<img alt="Logo" src="{{ asset('assets/media/logos/cintaindo.png') }}" class="h-25px d-none d-sm-inline app-sidebar-logo-default theme-dark-show" />
 							</a>
 						</div>
 						<!--end::Logo-->
@@ -70,6 +70,7 @@
 							<div class="app-header-menu app-header-mobile-drawer align-items-stretch" data-kt-drawer="true" data-kt-drawer-name="app-header-menu" data-kt-drawer-activate="{default: true, lg: false}" data-kt-drawer-overlay="true" data-kt-drawer-width="250px" data-kt-drawer-direction="start" data-kt-drawer-toggle="#kt_app_header_menu_toggle" data-kt-swapper="true" data-kt-swapper-mode="{default: 'append', lg: 'prepend'}" data-kt-swapper-parent="{default: '#kt_app_body', lg: '#kt_app_header_wrapper'}">
 								<!--begin::Menu-->
 								<div class="menu menu-rounded menu-active-bg menu-state-primary menu-column menu-lg-row menu-title-gray-700 menu-icon-gray-500 menu-arrow-gray-500 menu-bullet-gray-500 my-5 my-lg-0 align-items-stretch fw-semibold px-2 px-lg-0" id="kt_app_header_menu" data-kt-menu="true">
+                  @if (Auth::check())
 									<!--begin:Menu item-->
 									<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" data-kt-menu-offset="-50,0" class="menu-item here show menu-here-bg menu-lg-down-accordion me-0 me-lg-2">
 										<!--begin:Menu link-->
@@ -93,7 +94,7 @@
 																<!--begin:Menu item-->
 																<div class="menu-item p-0 m-0">
 																	<!--begin:Menu link-->
-																	<a href="../../demo30/dist/index.html" class="menu-link active">
+																	<a href="#" class="menu-link active">
 																		<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
 																			<!--begin::Svg Icon | path: icons/duotune/general/gen025.svg-->
 																			<span class="svg-icon svg-icon-primary svg-icon-1">
@@ -121,7 +122,7 @@
 																<!--begin:Menu item-->
 																<div class="menu-item p-0 m-0">
 																	<!--begin:Menu link-->
-																	<a href="../../demo30/dist/dashboards/ecommerce.html" class="menu-link">
+																	<a href="#" class="menu-link">
 																		<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
 																			<!--begin::Svg Icon | path: icons/duotune/ecommerce/ecm002.svg-->
 																			<span class="svg-icon svg-icon-danger svg-icon-1">
@@ -148,7 +149,7 @@
 																<!--begin:Menu item-->
 																<div class="menu-item p-0 m-0">
 																	<!--begin:Menu link-->
-																	<a href="../../demo30/dist/dashboards/projects.html" class="menu-link">
+																	<a href="#" class="menu-link">
 																		<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
 																			<!--begin::Svg Icon | path: icons/duotune/abstract/abs045.svg-->
 																			<span class="svg-icon svg-icon-info svg-icon-1">
@@ -174,7 +175,7 @@
 																<!--begin:Menu item-->
 																<div class="menu-item p-0 m-0">
 																	<!--begin:Menu link-->
-																	<a href="../../demo30/dist/dashboards/online-courses.html" class="menu-link">
+																	<a href="#" class="menu-link">
 																		<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
 																			<!--begin::Svg Icon | path: icons/duotune/art/art002.svg-->
 																			<span class="svg-icon svg-icon-success svg-icon-1">
@@ -200,7 +201,7 @@
 																<!--begin:Menu item-->
 																<div class="menu-item p-0 m-0">
 																	<!--begin:Menu link-->
-																	<a href="../../demo30/dist/dashboards/marketing.html" class="menu-link">
+																	<a href="#" class="menu-link">
 																		<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
 																			<!--begin::Svg Icon | path: icons/duotune/graphs/gra001.svg-->
 																			<span class="svg-icon svg-icon-dark svg-icon-1">
@@ -226,7 +227,7 @@
 																<!--begin:Menu item-->
 																<div class="menu-item p-0 m-0">
 																	<!--begin:Menu link-->
-																	<a href="../../demo30/dist/dashboards/bidding.html" class="menu-link">
+																	<a href="#" class="menu-link">
 																		<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
 																			<!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
 																			<span class="svg-icon svg-icon-warning svg-icon-1">
@@ -252,7 +253,7 @@
 																<!--begin:Menu item-->
 																<div class="menu-item p-0 m-0">
 																	<!--begin:Menu link-->
-																	<a href="../../demo30/dist/dashboards/pos.html" class="menu-link">
+																	<a href="#" class="menu-link">
 																		<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
 																			<!--begin::Svg Icon | path: icons/duotune/abstract/abs043.svg-->
 																			<span class="svg-icon svg-icon-danger svg-icon-1">
@@ -278,7 +279,7 @@
 																<!--begin:Menu item-->
 																<div class="menu-item p-0 m-0">
 																	<!--begin:Menu link-->
-																	<a href="../../demo30/dist/dashboards/call-center.html" class="menu-link">
+																	<a href="#" class="menu-link">
 																		<span class="menu-custom-icon d-flex flex-center flex-shrink-0 rounded w-40px h-40px me-3">
 																			<!--begin::Svg Icon | path: icons/duotune/communication/com004.svg-->
 																			<span class="svg-icon svg-icon-primary svg-icon-1">
@@ -308,7 +309,7 @@
 																<div class="fs-6 fw-bold text-gray-800">Landing Page Template</div>
 																<div class="fs-7 fw-semibold text-muted">Onpe page landing template with pricing & others</div>
 															</div>
-															<a href="../../demo30/dist/landing.html" class="btn btn-sm btn-primary fw-bold">Explore</a>
+															<a href="#" class="btn btn-sm btn-primary fw-bold">Explore</a>
 														</div>
 														<!--end:Landing-->
 													</div>
@@ -321,7 +322,7 @@
 														<!--begin:Menu item-->
 														<div class="menu-item p-0 m-0">
 															<!--begin:Menu link-->
-															<a href="../../demo30/dist/dashboards/logistics.html" class="menu-link py-2">
+															<a href="#" class="menu-link py-2">
 																<span class="menu-title">Logistics</span>
 															</a>
 															<!--end:Menu link-->
@@ -330,7 +331,7 @@
 														<!--begin:Menu item-->
 														<div class="menu-item p-0 m-0">
 															<!--begin:Menu link-->
-															<a href="../../demo30/dist/dashboards/website-analytics.html" class="menu-link py-2">
+															<a href="#" class="menu-link py-2">
 																<span class="menu-title">Website Analytics</span>
 															</a>
 															<!--end:Menu link-->
@@ -339,7 +340,7 @@
 														<!--begin:Menu item-->
 														<div class="menu-item p-0 m-0">
 															<!--begin:Menu link-->
-															<a href="../../demo30/dist/dashboards/finance-performance.html" class="menu-link py-2">
+															<a href="#" class="menu-link py-2">
 																<span class="menu-title">Finance Performance</span>
 															</a>
 															<!--end:Menu link-->
@@ -348,7 +349,7 @@
 														<!--begin:Menu item-->
 														<div class="menu-item p-0 m-0">
 															<!--begin:Menu link-->
-															<a href="../../demo30/dist/dashboards/store-analytics.html" class="menu-link py-2">
+															<a href="#" class="menu-link py-2">
 																<span class="menu-title">Store Analytics</span>
 															</a>
 															<!--end:Menu link-->
@@ -357,7 +358,7 @@
 														<!--begin:Menu item-->
 														<div class="menu-item p-0 m-0">
 															<!--begin:Menu link-->
-															<a href="../../demo30/dist/dashboards/social.html" class="menu-link py-2">
+															<a href="#" class="menu-link py-2">
 																<span class="menu-title">Social</span>
 															</a>
 															<!--end:Menu link-->
@@ -366,7 +367,7 @@
 														<!--begin:Menu item-->
 														<div class="menu-item p-0 m-0">
 															<!--begin:Menu link-->
-															<a href="../../demo30/dist/dashboards/delivery.html" class="menu-link py-2">
+															<a href="#" class="menu-link py-2">
 																<span class="menu-title">Delivery</span>
 															</a>
 															<!--end:Menu link-->
@@ -375,7 +376,7 @@
 														<!--begin:Menu item-->
 														<div class="menu-item p-0 m-0">
 															<!--begin:Menu link-->
-															<a href="../../demo30/dist/dashboards/crypto.html" class="menu-link py-2">
+															<a href="#" class="menu-link py-2">
 																<span class="menu-title">Crypto</span>
 															</a>
 															<!--end:Menu link-->
@@ -384,7 +385,7 @@
 														<!--begin:Menu item-->
 														<div class="menu-item p-0 m-0">
 															<!--begin:Menu link-->
-															<a href="../../demo30/dist/dashboards/school.html" class="menu-link py-2">
+															<a href="#" class="menu-link py-2">
 																<span class="menu-title">School</span>
 															</a>
 															<!--end:Menu link-->
@@ -393,7 +394,7 @@
 														<!--begin:Menu item-->
 														<div class="menu-item p-0 m-0">
 															<!--begin:Menu link-->
-															<a href="../../demo30/dist/dashboards/podcast.html" class="menu-link py-2">
+															<a href="#" class="menu-link py-2">
 																<span class="menu-title">Podcast</span>
 															</a>
 															<!--end:Menu link-->
@@ -470,7 +471,7 @@
 																		<!--begin:Menu item-->
 																		<div class="menu-item p-0 m-0">
 																			<!--begin:Menu link-->
-																			<a href="../../demo30/dist/pages/user-profile/overview.html" class="menu-link">
+																			<a href="#" class="menu-link">
 																				<span class="menu-title">Overview</span>
 																			</a>
 																			<!--end:Menu link-->
@@ -479,7 +480,7 @@
 																		<!--begin:Menu item-->
 																		<div class="menu-item p-0 m-0">
 																			<!--begin:Menu link-->
-																			<a href="../../demo30/dist/pages/user-profile/projects.html" class="menu-link">
+																			<a href="#" class="menu-link">
 																				<span class="menu-title">Projects</span>
 																			</a>
 																			<!--end:Menu link-->
@@ -488,7 +489,7 @@
 																		<!--begin:Menu item-->
 																		<div class="menu-item p-0 m-0">
 																			<!--begin:Menu link-->
-																			<a href="../../demo30/dist/pages/user-profile/campaigns.html" class="menu-link">
+																			<a href="#" class="menu-link">
 																				<span class="menu-title">Campaigns</span>
 																			</a>
 																			<!--end:Menu link-->
@@ -497,7 +498,7 @@
 																		<!--begin:Menu item-->
 																		<div class="menu-item p-0 m-0">
 																			<!--begin:Menu link-->
-																			<a href="../../demo30/dist/pages/user-profile/documents.html" class="menu-link">
+																			<a href="#" class="menu-link">
 																				<span class="menu-title">Documents</span>
 																			</a>
 																			<!--end:Menu link-->
@@ -506,7 +507,7 @@
 																		<!--begin:Menu item-->
 																		<div class="menu-item p-0 m-0">
 																			<!--begin:Menu link-->
-																			<a href="../../demo30/dist/pages/user-profile/followers.html" class="menu-link">
+																			<a href="#" class="menu-link">
 																				<span class="menu-title">Followers</span>
 																			</a>
 																			<!--end:Menu link-->
@@ -515,7 +516,7 @@
 																		<!--begin:Menu item-->
 																		<div class="menu-item p-0 m-0">
 																			<!--begin:Menu link-->
-																			<a href="../../demo30/dist/pages/user-profile/activity.html" class="menu-link">
+																			<a href="#" class="menu-link">
 																				<span class="menu-title">Activity</span>
 																			</a>
 																			<!--end:Menu link-->
@@ -533,7 +534,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/pages/about.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">About</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -542,7 +543,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/pages/team.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Our Team</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -551,7 +552,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/pages/contact.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Contact Us</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -560,7 +561,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/pages/licenses.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Licenses</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -569,7 +570,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/pages/sitemap.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Sitemap</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -585,7 +586,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/pages/careers/list.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Careers List</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -594,7 +595,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/pages/careers/apply.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Careers Apply</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -614,7 +615,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/pages/faq/classic.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">FAQ Classic</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -623,7 +624,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/pages/faq/extended.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">FAQ Extended</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -639,7 +640,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/pages/blog/home.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Blog Home</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -648,7 +649,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/pages/blog/post.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Blog Post</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -664,7 +665,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/pages/pricing/column.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Column Pricing</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -673,7 +674,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/pages/pricing/table.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Table Pricing</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -693,7 +694,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/pages/social/feeds.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Feeds</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -702,7 +703,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/pages/social/activity.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Activty</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -711,7 +712,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/pages/social/followers.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Followers</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -720,7 +721,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/pages/social/settings.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Settings</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -756,7 +757,7 @@
 																		<!--begin:Menu item-->
 																		<div class="menu-item p-0 m-0">
 																			<!--begin:Menu link-->
-																			<a href="../../demo30/dist/account/overview.html" class="menu-link">
+																			<a href="#" class="menu-link">
 																				<span class="menu-title">Overview</span>
 																			</a>
 																			<!--end:Menu link-->
@@ -765,7 +766,7 @@
 																		<!--begin:Menu item-->
 																		<div class="menu-item p-0 m-0">
 																			<!--begin:Menu link-->
-																			<a href="../../demo30/dist/account/settings.html" class="menu-link">
+																			<a href="#" class="menu-link">
 																				<span class="menu-title">Settings</span>
 																			</a>
 																			<!--end:Menu link-->
@@ -774,7 +775,7 @@
 																		<!--begin:Menu item-->
 																		<div class="menu-item p-0 m-0">
 																			<!--begin:Menu link-->
-																			<a href="../../demo30/dist/account/security.html" class="menu-link">
+																			<a href="#" class="menu-link">
 																				<span class="menu-title">Security</span>
 																			</a>
 																			<!--end:Menu link-->
@@ -783,7 +784,7 @@
 																		<!--begin:Menu item-->
 																		<div class="menu-item p-0 m-0">
 																			<!--begin:Menu link-->
-																			<a href="../../demo30/dist/account/activity.html" class="menu-link">
+																			<a href="#" class="menu-link">
 																				<span class="menu-title">Activity</span>
 																			</a>
 																			<!--end:Menu link-->
@@ -792,7 +793,7 @@
 																		<!--begin:Menu item-->
 																		<div class="menu-item p-0 m-0">
 																			<!--begin:Menu link-->
-																			<a href="../../demo30/dist/account/billing.html" class="menu-link">
+																			<a href="#" class="menu-link">
 																				<span class="menu-title">Billing</span>
 																			</a>
 																			<!--end:Menu link-->
@@ -805,7 +806,7 @@
 																		<!--begin:Menu item-->
 																		<div class="menu-item p-0 m-0">
 																			<!--begin:Menu link-->
-																			<a href="../../demo30/dist/account/statements.html" class="menu-link">
+																			<a href="#" class="menu-link">
 																				<span class="menu-title">Statements</span>
 																			</a>
 																			<!--end:Menu link-->
@@ -814,7 +815,7 @@
 																		<!--begin:Menu item-->
 																		<div class="menu-item p-0 m-0">
 																			<!--begin:Menu link-->
-																			<a href="../../demo30/dist/account/referrals.html" class="menu-link">
+																			<a href="#" class="menu-link">
 																				<span class="menu-title">Referrals</span>
 																			</a>
 																			<!--end:Menu link-->
@@ -823,7 +824,7 @@
 																		<!--begin:Menu item-->
 																		<div class="menu-item p-0 m-0">
 																			<!--begin:Menu link-->
-																			<a href="../../demo30/dist/account/api-keys.html" class="menu-link">
+																			<a href="#" class="menu-link">
 																				<span class="menu-title">API Keys</span>
 																			</a>
 																			<!--end:Menu link-->
@@ -832,7 +833,7 @@
 																		<!--begin:Menu item-->
 																		<div class="menu-item p-0 m-0">
 																			<!--begin:Menu link-->
-																			<a href="../../demo30/dist/account/logs.html" class="menu-link">
+																			<a href="#" class="menu-link">
 																				<span class="menu-title">Logs</span>
 																			</a>
 																			<!--end:Menu link-->
@@ -867,7 +868,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/corporate/sign-in.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Sign-in</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -876,7 +877,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/corporate/sign-up.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Sign-up</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -885,7 +886,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/corporate/two-steps.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Two-steps</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -894,7 +895,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/corporate/reset-password.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Reset Password</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -903,7 +904,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/corporate/new-password.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">New Password</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -919,7 +920,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/overlay/sign-in.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Sign-in</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -928,7 +929,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/overlay/sign-up.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Sign-up</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -937,7 +938,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/overlay/two-steps.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Two-steps</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -946,7 +947,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/overlay/reset-password.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Reset Password</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -955,7 +956,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/overlay/new-password.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">New Password</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -975,7 +976,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/creative/sign-in.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Sign-in</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -984,7 +985,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/creative/sign-up.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Sign-up</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -993,7 +994,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/creative/two-steps.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Two-steps</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1002,7 +1003,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/creative/reset-password.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Reset Password</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1011,7 +1012,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/creative/new-password.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">New Password</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1027,7 +1028,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/fancy/sign-in.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Sign-in</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1036,7 +1037,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/fancy/sign-up.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Sign-up</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1045,7 +1046,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/fancy/two-steps.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Two-steps</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1054,7 +1055,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/fancy/reset-password.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Reset Password</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1063,7 +1064,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/layouts/fancy/new-password.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">New Password</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1083,7 +1084,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/extended/multi-steps-sign-up.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Multi-steps Sign-up</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1092,7 +1093,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/extended/two-factor-auth.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Two Factor Auth</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1101,7 +1102,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/general/welcome.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Welcome Message</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1110,7 +1111,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/general/verify-email.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Verify Email</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1119,7 +1120,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/extended/coming-soon.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Coming Soon</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1128,7 +1129,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/general/password-confirmation.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Password Confirmation</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1137,7 +1138,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/general/account-deactivated.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Account Deactivation</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1146,7 +1147,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/general/error-404.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Error 404</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1155,7 +1156,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/general/error-500.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Error 500</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1175,7 +1176,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/email/welcome-message.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Welcome Message</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1184,7 +1185,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/email/reset-password.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Reset Password</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1193,7 +1194,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/email/subscription-confirmed.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Subscription Confirmed</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1202,7 +1203,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/email/card-declined.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Credit Card Declined</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1211,7 +1212,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/email/promo-1.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Promo 1</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1220,7 +1221,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/email/promo-2.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Promo 2</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1229,7 +1230,7 @@
 																	<!--begin:Menu item-->
 																	<div class="menu-item p-0 m-0">
 																		<!--begin:Menu link-->
-																		<a href="../../demo30/dist/authentication/email/promo-3.html" class="menu-link">
+																		<a href="#" class="menu-link">
 																			<span class="menu-title">Promo 3</span>
 																		</a>
 																		<!--end:Menu link-->
@@ -1261,7 +1262,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/general/invite-friends.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Invite Friends</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1270,7 +1271,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/general/view-users.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">View Users</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1279,7 +1280,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/general/select-users.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Select Users</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1288,7 +1289,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/general/upgrade-plan.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Upgrade Plan</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1297,7 +1298,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/general/share-earn.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Share & Earn</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1306,7 +1307,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/forms/new-target.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">New Target</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1315,7 +1316,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/forms/new-card.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">New Card</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1324,7 +1325,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/forms/new-address.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">New Address</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1333,7 +1334,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/forms/create-api-key.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Create API Key</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1342,7 +1343,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/forms/bidding.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Bidding</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1362,7 +1363,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/wizards/create-app.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Create App</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1371,7 +1372,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/wizards/create-campaign.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Create Campaign</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1380,7 +1381,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/wizards/create-account.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Create Business Acc</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1389,7 +1390,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/wizards/create-project.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Create Project</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1398,7 +1399,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/wizards/top-up-wallet.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Top Up Wallet</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1407,7 +1408,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/wizards/offer-a-deal.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Offer a Deal</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1416,7 +1417,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/wizards/two-factor-authentication.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Two Factor Auth</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1432,7 +1433,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/search/horizontal.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Horizontal</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1441,7 +1442,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/search/vertical.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Vertical</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1450,7 +1451,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/search/users.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Users</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1459,7 +1460,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/search/select-location.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Select Location</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1479,7 +1480,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/wizards/horizontal.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Horizontal</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1488,7 +1489,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/wizards/vertical.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Vertical</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1497,7 +1498,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/wizards/two-factor-authentication.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Two Factor Auth</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1506,7 +1507,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/wizards/create-app.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Create App</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1515,7 +1516,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/wizards/create-campaign.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Create Campaign</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1524,7 +1525,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/wizards/create-account.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Create Account</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1533,7 +1534,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/wizards/create-project.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Create Project</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1542,7 +1543,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/modals/wizards/top-up-wallet.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Top Up Wallet</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1551,7 +1552,7 @@
 																			<!--begin:Menu item-->
 																			<div class="menu-item p-0 m-0">
 																				<!--begin:Menu link-->
-																				<a href="../../demo30/dist/utilities/wizards/offer-a-deal.html" class="menu-link">
+																				<a href="#" class="menu-link">
 																					<span class="menu-title">Offer a Deal</span>
 																				</a>
 																				<!--end:Menu link-->
@@ -1583,7 +1584,7 @@
 																<!--begin:Menu item-->
 																<div class="menu-item p-0 m-0">
 																	<!--begin:Menu link-->
-																	<a href="../../demo30/dist/widgets/lists.html" class="menu-link">
+																	<a href="#" class="menu-link">
 																		<span class="menu-title">Lists</span>
 																	</a>
 																	<!--end:Menu link-->
@@ -1592,7 +1593,7 @@
 																<!--begin:Menu item-->
 																<div class="menu-item p-0 m-0">
 																	<!--begin:Menu link-->
-																	<a href="../../demo30/dist/widgets/statistics.html" class="menu-link">
+																	<a href="#" class="menu-link">
 																		<span class="menu-title">Statistics</span>
 																	</a>
 																	<!--end:Menu link-->
@@ -1601,7 +1602,7 @@
 																<!--begin:Menu item-->
 																<div class="menu-item p-0 m-0">
 																	<!--begin:Menu link-->
-																	<a href="../../demo30/dist/widgets/charts.html" class="menu-link">
+																	<a href="#" class="menu-link">
 																		<span class="menu-title">Charts</span>
 																	</a>
 																	<!--end:Menu link-->
@@ -1610,7 +1611,7 @@
 																<!--begin:Menu item-->
 																<div class="menu-item p-0 m-0">
 																	<!--begin:Menu link-->
-																	<a href="../../demo30/dist/widgets/mixed.html" class="menu-link">
+																	<a href="#" class="menu-link">
 																		<span class="menu-title">Mixed</span>
 																	</a>
 																	<!--end:Menu link-->
@@ -1619,7 +1620,7 @@
 																<!--begin:Menu item-->
 																<div class="menu-item p-0 m-0">
 																	<!--begin:Menu link-->
-																	<a href="../../demo30/dist/widgets/tables.html" class="menu-link">
+																	<a href="#" class="menu-link">
 																		<span class="menu-title">Tables</span>
 																	</a>
 																	<!--end:Menu link-->
@@ -1628,7 +1629,7 @@
 																<!--begin:Menu item-->
 																<div class="menu-item p-0 m-0">
 																	<!--begin:Menu link-->
-																	<a href="../../demo30/dist/widgets/feeds.html" class="menu-link">
+																	<a href="#" class="menu-link">
 																		<span class="menu-title">Feeds</span>
 																	</a>
 																	<!--end:Menu link-->
@@ -1686,7 +1687,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/projects/list.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -1698,7 +1699,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/projects/project.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -1710,7 +1711,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/projects/targets.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -1722,7 +1723,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/projects/budget.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -1734,7 +1735,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/projects/users.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -1746,7 +1747,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/projects/files.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -1758,7 +1759,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/projects/activity.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -1770,7 +1771,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/projects/settings.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -1821,7 +1822,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/ecommerce/catalog/products.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -1833,7 +1834,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/ecommerce/catalog/categories.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -1845,7 +1846,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/ecommerce/catalog/add-product.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -1857,7 +1858,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/ecommerce/catalog/edit-product.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -1869,7 +1870,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/ecommerce/catalog/add-category.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -1881,7 +1882,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/ecommerce/catalog/edit-category.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -1910,7 +1911,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/ecommerce/sales/listing.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -1922,7 +1923,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/ecommerce/sales/details.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -1934,7 +1935,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/ecommerce/sales/add-order.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -1946,7 +1947,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/ecommerce/sales/edit-order.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -1975,7 +1976,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/ecommerce/customers/listing.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -1987,7 +1988,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/ecommerce/customers/details.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2016,7 +2017,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/ecommerce/reports/view.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2028,7 +2029,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/ecommerce/reports/sales.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2040,7 +2041,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/ecommerce/reports/returns.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2052,7 +2053,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/ecommerce/reports/customer-orders.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2064,7 +2065,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/ecommerce/reports/shipping.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2080,7 +2081,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/ecommerce/settings.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2116,7 +2117,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/support-center/overview.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2141,7 +2142,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/support-center/tickets/list.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2153,7 +2154,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/support-center/tickets/view.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2182,7 +2183,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/support-center/tutorials/list.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2194,7 +2195,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/support-center/tutorials/post.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2210,7 +2211,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/support-center/faq.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2222,7 +2223,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/support-center/licenses.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2234,7 +2235,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/support-center/contact.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2283,7 +2284,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/user-management/users/list.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2295,7 +2296,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/user-management/users/view.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2324,7 +2325,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/user-management/roles/list.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2336,7 +2337,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/user-management/roles/view.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2352,7 +2353,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/user-management/permissions.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2389,7 +2390,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/contacts/getting-started.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2401,7 +2402,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/contacts/add-contact.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2413,7 +2414,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/contacts/edit-contact.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2425,7 +2426,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/contacts/view-contact.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2462,7 +2463,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/subscriptions/getting-started.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2474,7 +2475,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/subscriptions/list.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2486,7 +2487,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/subscriptions/add.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2498,7 +2499,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/subscriptions/view.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2534,7 +2535,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/customers/getting-started.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2546,7 +2547,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/customers/list.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2558,7 +2559,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/customers/view.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2607,7 +2608,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/invoices/view/invoice-1.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2619,7 +2620,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/invoices/view/invoice-2.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2631,7 +2632,7 @@
 															<!--begin:Menu item-->
 															<div class="menu-item">
 																<!--begin:Menu link-->
-																<a class="menu-link" href="../../demo30/dist/apps/invoices/view/invoice-3.html">
+																<a class="menu-link" href="#">
 																	<span class="menu-bullet">
 																		<span class="bullet bullet-dot"></span>
 																	</span>
@@ -2647,7 +2648,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/invoices/create.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2684,7 +2685,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/file-manager/folders.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2696,7 +2697,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/file-manager/files.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2708,7 +2709,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/file-manager/blank.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2720,7 +2721,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/file-manager/settings.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2756,7 +2757,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/inbox/listing.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2771,7 +2772,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/inbox/compose.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2783,7 +2784,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/inbox/reply.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2820,7 +2821,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/chat/private.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2832,7 +2833,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/chat/group.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2844,7 +2845,7 @@
 													<!--begin:Menu item-->
 													<div class="menu-item">
 														<!--begin:Menu link-->
-														<a class="menu-link" href="../../demo30/dist/apps/chat/drawer.html">
+														<a class="menu-link" href="#">
 															<span class="menu-bullet">
 																<span class="bullet bullet-dot"></span>
 															</span>
@@ -2860,7 +2861,7 @@
 											<!--begin:Menu item-->
 											<div class="menu-item">
 												<!--begin:Menu link-->
-												<a class="menu-link" href="../../demo30/dist/apps/calendar.html">
+												<a class="menu-link" href="#">
 													<span class="menu-icon">
 														<!--begin::Svg Icon | path: icons/duotune/general/gen014.svg-->
 														<span class="svg-icon svg-icon-2">
@@ -2881,6 +2882,35 @@
 										<!--end:Menu sub-->
 									</div>
 									<!--end:Menu item-->
+                  @endif
+                  <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link" href="{{ route('home') }}">
+                      <span class="menu-title">Home</span>
+                    </a>
+                    <!--end:Menu link-->
+                  </div>
+                  <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link" href="{{ route('admin') }}">
+                      <span class="menu-title">Admin</span>
+                    </a>
+                    <!--end:Menu link-->
+                  </div>
+                  <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link" href="{{ route('wizard') }}">
+                      <span class="menu-title">Horizontal Input</span>
+                    </a>
+                    <!--end:Menu link-->
+                  </div>
+                  <div class="menu-item">
+                    <!--begin:Menu link-->
+                    <a class="menu-link" href="{{ route('listpeserta') }}">
+                      <span class="menu-title">List Peserta</span>
+                    </a>
+                    <!--end:Menu link-->
+                  </div>
 									<!--begin:Menu item-->
 									<div data-kt-menu-trigger="{default: 'click', lg: 'hover'}" data-kt-menu-placement="bottom-start" class="menu-item menu-lg-down-accordion menu-sub-lg-down-indention me-0 me-lg-2">
 										<!--begin:Menu link-->
@@ -2894,7 +2924,7 @@
 											<!--begin:Menu item-->
 											<div class="menu-item">
 												<!--begin:Menu link-->
-												<a class="menu-link" href="https://preview.keenthemes.com/html/metronic/docs/base/utilities" target="_blank" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<a class="menu-link" href="{{ route('kontak') }}" target="_blank" title="Check out over 200 in-house components, plugins and ready for use solutions" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
 													<span class="menu-icon">
 														<!--begin::Svg Icon | path: icons/duotune/general/gen002.svg-->
 														<span class="svg-icon svg-icon-3">
@@ -2905,7 +2935,7 @@
 														</span>
 														<!--end::Svg Icon-->
 													</span>
-													<span class="menu-title">Components</span>
+													<span class="menu-title">Kontak</span>
 												</a>
 												<!--end:Menu link-->
 											</div>
@@ -2913,7 +2943,7 @@
 											<!--begin:Menu item-->
 											<div class="menu-item">
 												<!--begin:Menu link-->
-												<a class="menu-link" href="https://preview.keenthemes.com/html/metronic/docs" target="_blank" title="Check out the complete documentation" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<a class="menu-link" href="{{ route('faq') }}" target="_blank" title="Check out the complete documentation" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
 													<span class="menu-icon">
 														<!--begin::Svg Icon | path: icons/duotune/abstract/abs027.svg-->
 														<span class="svg-icon svg-icon-3">
@@ -2924,7 +2954,7 @@
 														</span>
 														<!--end::Svg Icon-->
 													</span>
-													<span class="menu-title">Documentation</span>
+													<span class="menu-title">FAQ</span>
 												</a>
 												<!--end:Menu link-->
 											</div>
@@ -2932,7 +2962,7 @@
 											<!--begin:Menu item-->
 											<div class="menu-item">
 												<!--begin:Menu link-->
-												<a class="menu-link" href="https://preview.keenthemes.com/metronic8/demo30/layout-builder.html" title="Build your layout and export HTML for server side integration" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+												<a class="menu-link" href="{{ route('about') }}" title="Build your layout and export HTML for server side integration" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
 													<span class="menu-icon">
 														<!--begin::Svg Icon | path: icons/duotune/general/gen019.svg-->
 														<span class="svg-icon svg-icon-3">
@@ -2943,26 +2973,7 @@
 														</span>
 														<!--end::Svg Icon-->
 													</span>
-													<span class="menu-title">Layout Builder</span>
-												</a>
-												<!--end:Menu link-->
-											</div>
-											<!--end:Menu item-->
-											<!--begin:Menu item-->
-											<div class="menu-item">
-												<!--begin:Menu link-->
-												<a class="menu-link" href="https://preview.keenthemes.com/html/metronic/docs/getting-started/changelog" target="_blank">
-													<span class="menu-icon">
-														<!--begin::Svg Icon | path: icons/duotune/coding/cod003.svg-->
-														<span class="svg-icon svg-icon-3">
-															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-																<path d="M16.95 18.9688C16.75 18.9688 16.55 18.8688 16.35 18.7688C15.85 18.4688 15.75 17.8688 16.05 17.3688L19.65 11.9688L16.05 6.56876C15.75 6.06876 15.85 5.46873 16.35 5.16873C16.85 4.86873 17.45 4.96878 17.75 5.46878L21.75 11.4688C21.95 11.7688 21.95 12.2688 21.75 12.5688L17.75 18.5688C17.55 18.7688 17.25 18.9688 16.95 18.9688ZM7.55001 18.7688C8.05001 18.4688 8.15 17.8688 7.85 17.3688L4.25001 11.9688L7.85 6.56876C8.15 6.06876 8.05001 5.46873 7.55001 5.16873C7.05001 4.86873 6.45 4.96878 6.15 5.46878L2.15 11.4688C1.95 11.7688 1.95 12.2688 2.15 12.5688L6.15 18.5688C6.35 18.8688 6.65 18.9688 6.95 18.9688C7.15 18.9688 7.35001 18.8688 7.55001 18.7688Z" fill="currentColor" />
-																<path opacity="0.3" d="M10.45 18.9687C10.35 18.9687 10.25 18.9687 10.25 18.9687C9.75 18.8687 9.35 18.2688 9.55 17.7688L12.55 5.76878C12.65 5.26878 13.25 4.8687 13.75 5.0687C14.25 5.1687 14.65 5.76878 14.45 6.26878L11.45 18.2688C11.35 18.6688 10.85 18.9687 10.45 18.9687Z" fill="currentColor" />
-															</svg>
-														</span>
-														<!--end::Svg Icon-->
-													</span>
-													<span class="menu-title">Changelog v8.1.6</span>
+													<span class="menu-title">Tentang Kami</span>
 												</a>
 												<!--end:Menu link-->
 											</div>
@@ -3657,7 +3668,7 @@
 												<!--begin::Actions-->
 												<div class="d-flex justify-content-end">
 													<button type="reset" class="btn btn-sm btn-light fw-bold btn-active-light-primary me-2" data-kt-search-element="advanced-options-form-cancel">Cancel</button>
-													<a href="../../demo30/dist/pages/search/horizontal.html" class="btn btn-sm fw-bold btn-primary" data-kt-search-element="advanced-options-form-search">Search</a>
+													<a href="#" class="btn btn-sm fw-bold btn-primary" data-kt-search-element="advanced-options-form-search">Search</a>
 												</div>
 												<!--end::Actions-->
 											</form>
@@ -3980,7 +3991,7 @@
 												<!--end::Items-->
 												<!--begin::View more-->
 												<div class="py-3 text-center border-top">
-													<a href="../../demo30/dist/pages/user-profile/activity.html" class="btn btn-color-gray-600 btn-active-color-primary">View All
+													<a href="#" class="btn btn-color-gray-600 btn-active-color-primary">View All
 													<!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
 													<span class="svg-icon svg-icon-5">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -4233,7 +4244,7 @@
 												<!--end::Items-->
 												<!--begin::View more-->
 												<div class="py-3 text-center border-top">
-													<a href="../../demo30/dist/pages/user-profile/activity.html" class="btn btn-color-gray-600 btn-active-color-primary">View All
+													<a href="#" class="btn btn-color-gray-600 btn-active-color-primary">View All
 													<!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
 													<span class="svg-icon svg-icon-5">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -4275,7 +4286,7 @@
 										<div class="row g-0">
 											<!--begin:Item-->
 											<div class="col-6">
-												<a href="../../demo30/dist/apps/projects/budget.html" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-end border-bottom">
+												<a href="#" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-end border-bottom">
 													<!--begin::Svg Icon | path: icons/duotune/finance/fin009.svg-->
 													<span class="svg-icon svg-icon-3x svg-icon-primary mb-2">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -4291,7 +4302,7 @@
 											<!--end:Item-->
 											<!--begin:Item-->
 											<div class="col-6">
-												<a href="../../demo30/dist/apps/projects/settings.html" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-bottom">
+												<a href="#" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-bottom">
 													<!--begin::Svg Icon | path: icons/duotune/communication/com010.svg-->
 													<span class="svg-icon svg-icon-3x svg-icon-primary mb-2">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -4307,7 +4318,7 @@
 											<!--end:Item-->
 											<!--begin:Item-->
 											<div class="col-6">
-												<a href="../../demo30/dist/apps/projects/list.html" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-end">
+												<a href="#" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light border-end">
 													<!--begin::Svg Icon | path: icons/duotune/abstract/abs042.svg-->
 													<span class="svg-icon svg-icon-3x svg-icon-primary mb-2">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -4323,7 +4334,7 @@
 											<!--end:Item-->
 											<!--begin:Item-->
 											<div class="col-6">
-												<a href="../../demo30/dist/apps/projects/users.html" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light">
+												<a href="#" class="d-flex flex-column flex-center h-100 p-6 bg-hover-light">
 													<!--begin::Svg Icon | path: icons/duotune/finance/fin006.svg-->
 													<span class="svg-icon svg-icon-3x svg-icon-primary mb-2">
 														<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -4341,7 +4352,7 @@
 										<!--end:Nav-->
 										<!--begin::View more-->
 										<div class="py-2 text-center border-top">
-											<a href="../../demo30/dist/pages/user-profile/activity.html" class="btn btn-color-gray-600 btn-active-color-primary">View All
+											<a href="#" class="btn btn-color-gray-600 btn-active-color-primary">View All
 											<!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
 											<span class="svg-icon svg-icon-5">
 												<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -4397,12 +4408,12 @@
 										<!--end::Menu separator-->
 										<!--begin::Menu item-->
 										<div class="menu-item px-5">
-											<a href="../../demo30/dist/account/overview.html" class="menu-link px-5">My Profile</a>
+											<a href="#" class="menu-link px-5">My Profile</a>
 										</div>
 										<!--end::Menu item-->
 										<!--begin::Menu item-->
 										<div class="menu-item px-5">
-											<a href="../../demo30/dist/apps/projects/list.html" class="menu-link px-5">
+											<a href="#" class="menu-link px-5">
 												<span class="menu-text">My Projects</span>
 												<span class="menu-badge">
 													<span class="badge badge-light-danger badge-circle fw-bold fs-7">3</span>
@@ -4420,22 +4431,22 @@
 											<div class="menu-sub menu-sub-dropdown w-175px py-4">
 												<!--begin::Menu item-->
 												<div class="menu-item px-3">
-													<a href="../../demo30/dist/account/referrals.html" class="menu-link px-5">Referrals</a>
+													<a href="#" class="menu-link px-5">Referrals</a>
 												</div>
 												<!--end::Menu item-->
 												<!--begin::Menu item-->
 												<div class="menu-item px-3">
-													<a href="../../demo30/dist/account/billing.html" class="menu-link px-5">Billing</a>
+													<a href="#" class="menu-link px-5">Billing</a>
 												</div>
 												<!--end::Menu item-->
 												<!--begin::Menu item-->
 												<div class="menu-item px-3">
-													<a href="../../demo30/dist/account/statements.html" class="menu-link px-5">Payments</a>
+													<a href="#" class="menu-link px-5">Payments</a>
 												</div>
 												<!--end::Menu item-->
 												<!--begin::Menu item-->
 												<div class="menu-item px-3">
-													<a href="../../demo30/dist/account/statements.html" class="menu-link d-flex flex-stack px-5">Statements
+													<a href="#" class="menu-link d-flex flex-stack px-5">Statements
 													<i class="fas fa-exclamation-circle ms-2 fs-7" data-bs-toggle="tooltip" title="View your statements"></i></a>
 												</div>
 												<!--end::Menu item-->
@@ -4458,7 +4469,7 @@
 										<!--end::Menu item-->
 										<!--begin::Menu item-->
 										<div class="menu-item px-5">
-											<a href="../../demo30/dist/account/statements.html" class="menu-link px-5">My Statements</a>
+											<a href="#" class="menu-link px-5">My Statements</a>
 										</div>
 										<!--end::Menu item-->
 										<!--begin::Menu separator-->
@@ -4572,7 +4583,7 @@
 											<div class="menu-sub menu-sub-dropdown w-175px py-4">
 												<!--begin::Menu item-->
 												<div class="menu-item px-3">
-													<a href="../../demo30/dist/account/settings.html" class="menu-link d-flex px-5 active">
+													<a href="#" class="menu-link d-flex px-5 active">
 													<span class="symbol symbol-20px me-4">
 														<img class="rounded-1" src="{{ asset('assets/media/flags/united-states.svg') }}" alt="" />
 													</span>English</a>
@@ -4580,7 +4591,7 @@
 												<!--end::Menu item-->
 												<!--begin::Menu item-->
 												<div class="menu-item px-3">
-													<a href="../../demo30/dist/account/settings.html" class="menu-link d-flex px-5">
+													<a href="#" class="menu-link d-flex px-5">
 													<span class="symbol symbol-20px me-4">
 														<img class="rounded-1" src="{{ asset('assets/media/flags/spain.svg') }}" alt="" />
 													</span>Spanish</a>
@@ -4588,7 +4599,7 @@
 												<!--end::Menu item-->
 												<!--begin::Menu item-->
 												<div class="menu-item px-3">
-													<a href="../../demo30/dist/account/settings.html" class="menu-link d-flex px-5">
+													<a href="#" class="menu-link d-flex px-5">
 													<span class="symbol symbol-20px me-4">
 														<img class="rounded-1" src="{{ asset('assets/media/flags/germany.svg') }}" alt="" />
 													</span>German</a>
@@ -4596,7 +4607,7 @@
 												<!--end::Menu item-->
 												<!--begin::Menu item-->
 												<div class="menu-item px-3">
-													<a href="../../demo30/dist/account/settings.html" class="menu-link d-flex px-5">
+													<a href="#" class="menu-link d-flex px-5">
 													<span class="symbol symbol-20px me-4">
 														<img class="rounded-1" src="{{ asset('assets/media/flags/japan.svg') }}" alt="" />
 													</span>Japanese</a>
@@ -4604,7 +4615,7 @@
 												<!--end::Menu item-->
 												<!--begin::Menu item-->
 												<div class="menu-item px-3">
-													<a href="../../demo30/dist/account/settings.html" class="menu-link d-flex px-5">
+													<a href="#" class="menu-link d-flex px-5">
 													<span class="symbol symbol-20px me-4">
 														<img class="rounded-1" src="{{ asset('assets/media/flags/france.svg') }}" alt="" />
 													</span>French</a>
@@ -4616,12 +4627,12 @@
 										<!--end::Menu item-->
 										<!--begin::Menu item-->
 										<div class="menu-item px-5 my-1">
-											<a href="../../demo30/dist/account/settings.html" class="menu-link px-5">Account Settings</a>
+											<a href="#" class="menu-link px-5">Account Settings</a>
 										</div>
 										<!--end::Menu item-->
 										<!--begin::Menu item-->
 										<div class="menu-item px-5">
-											<a href="../../demo30/dist/authentication/layouts/corporate/sign-in.html" class="menu-link px-5">Sign Out</a>
+											<a href="#" class="menu-link px-5">Sign Out</a>
 										</div>
 										<!--end::Menu item-->
 									</div>
@@ -4653,7 +4664,7 @@
 									<ul class="breadcrumb breadcrumb-separatorless fw-semibold">
 										<!--begin::Item-->
 										<li class="breadcrumb-item text-white fw-bold lh-1">
-											<a href="../../demo30/dist/index.html" class="text-white">
+											<a href="#" class="text-white">
 												<i class="fonticon-home text-white fs-3"></i>
 											</a>
 										</li>
@@ -4682,9 +4693,9 @@
 									<div class="page-title d-flex align-items-center me-3">
 										<img alt="Logo" src="{{ asset('assets/media/svg/misc/layer.svg') }}" class="h-60px me-5" />
 										<!--begin::Title-->
-										<h1 class="page-heading d-flex text-white fw-bolder fs-2 flex-column justify-content-center my-0">Chartmix - Finance Team
+										<h1 class="page-heading d-flex text-white fw-bolder fs-2 flex-column justify-content-center my-0">@yield('title')
 										<!--begin::Description-->
-										<span class="page-desc text-white opacity-50 fs-6 fw-bold pt-4">Power Elite Seller</span>
+										<span class="page-desc text-white opacity-50 fs-6 fw-bold pt-4">Checkup Control Center</span>
 										<!--end::Description--></h1>
 										<!--end::Title-->
 									</div>
@@ -4869,7 +4880,7 @@
 										<!--begin::Record-->
 										<div class="d-flex align-items-center border border-dashed border-gray-300 rounded min-w-750px px-7 py-3 mb-5">
 											<!--begin::Title-->
-											<a href="../../demo30/dist/apps/projects/project.html" class="fs-5 text-dark text-hover-primary fw-semibold w-375px min-w-200px">Meeting with customer</a>
+											<a href="#" class="fs-5 text-dark text-hover-primary fw-semibold w-375px min-w-200px">Meeting with customer</a>
 											<!--end::Title-->
 											<!--begin::Label-->
 											<div class="min-w-175px pe-2">
@@ -4901,14 +4912,14 @@
 											</div>
 											<!--end::Progress-->
 											<!--begin::Action-->
-											<a href="../../demo30/dist/apps/projects/project.html" class="btn btn-sm btn-light btn-active-light-primary">View</a>
+											<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
 											<!--end::Action-->
 										</div>
 										<!--end::Record-->
 										<!--begin::Record-->
 										<div class="d-flex align-items-center border border-dashed border-gray-300 rounded min-w-750px px-7 py-3 mb-0">
 											<!--begin::Title-->
-											<a href="../../demo30/dist/apps/projects/project.html" class="fs-5 text-dark text-hover-primary fw-semibold w-375px min-w-200px">Project Delivery Preparation</a>
+											<a href="#" class="fs-5 text-dark text-hover-primary fw-semibold w-375px min-w-200px">Project Delivery Preparation</a>
 											<!--end::Title-->
 											<!--begin::Label-->
 											<div class="min-w-175px">
@@ -4935,7 +4946,7 @@
 											</div>
 											<!--end::Progress-->
 											<!--begin::Action-->
-											<a href="../../demo30/dist/apps/projects/project.html" class="btn btn-sm btn-light btn-active-light-primary">View</a>
+											<a href="#" class="btn btn-sm btn-light btn-active-light-primary">View</a>
 											<!--end::Action-->
 										</div>
 										<!--end::Record-->
@@ -5040,7 +5051,7 @@
 												<!--begin::Info-->
 												<div class="ms-1 fw-semibold">
 													<!--begin::Desc-->
-													<a href="../../demo30/dist/apps/projects/project.html" class="fs-6 text-hover-primary fw-bold">Finance KPI App Guidelines</a>
+													<a href="#" class="fs-6 text-hover-primary fw-bold">Finance KPI App Guidelines</a>
 													<!--end::Desc-->
 													<!--begin::Number-->
 													<div class="text-gray-400">1.9mb</div>
@@ -5052,7 +5063,7 @@
 											<!--begin::Item-->
 											<div class="d-flex flex-aligns-center pe-10 pe-lg-20">
 												<!--begin::Icon-->
-												<img alt="../../demo30/dist/apps/projects/project.html" class="w-30px me-3" src="{{ asset('assets/media/svg/files/doc.svg') }}" />
+												<img alt="#" class="w-30px me-3" src="{{ asset('assets/media/svg/files/doc.svg') }}" />
 												<!--end::Icon-->
 												<!--begin::Info-->
 												<div class="ms-1 fw-semibold">
@@ -5069,7 +5080,7 @@
 											<!--begin::Item-->
 											<div class="d-flex flex-aligns-center">
 												<!--begin::Icon-->
-												<img alt="../../demo30/dist/apps/projects/project.html" class="w-30px me-3" src="{{ asset('assets/media/svg/files/css.svg') }}" />
+												<img alt="#" class="w-30px me-3" src="{{ asset('assets/media/svg/files/css.svg') }}" />
 												<!--end::Icon-->
 												<!--begin::Info-->
 												<div class="ms-1 fw-semibold">
@@ -5402,7 +5413,7 @@
 				<!--end::Body-->
 				<!--begin::Footer-->
 				<div class="card-footer py-5 text-center" id="kt_activities_footer">
-					<a href="../../demo30/dist/pages/user-profile/activity.html" class="btn btn-bg-body text-primary">View All Activities
+					<a href="#" class="btn btn-bg-body text-primary">View All Activities
 					<!--begin::Svg Icon | path: icons/duotune/arrows/arr064.svg-->
 					<span class="svg-icon svg-icon-3 svg-icon-primary">
 						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -5820,7 +5831,7 @@
 						<div class="d-flex flex-column me-3">
 							<!--begin::Section-->
 							<div class="mb-3">
-								<a href="../../demo30/dist/apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">Iblender</a>
+								<a href="#" class="text-gray-800 text-hover-primary fs-4 fw-bold">Iblender</a>
 								<span class="text-gray-400 fw-semibold d-block">The best kitchen gadget in 2022</span>
 							</div>
 							<!--end::Section-->
@@ -5868,7 +5879,7 @@
 						<div class="d-flex flex-column me-3">
 							<!--begin::Section-->
 							<div class="mb-3">
-								<a href="../../demo30/dist/apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">SmartCleaner</a>
+								<a href="#" class="text-gray-800 text-hover-primary fs-4 fw-bold">SmartCleaner</a>
 								<span class="text-gray-400 fw-semibold d-block">Smart tool for cooking</span>
 							</div>
 							<!--end::Section-->
@@ -5916,7 +5927,7 @@
 						<div class="d-flex flex-column me-3">
 							<!--begin::Section-->
 							<div class="mb-3">
-								<a href="../../demo30/dist/apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">CameraMaxr</a>
+								<a href="#" class="text-gray-800 text-hover-primary fs-4 fw-bold">CameraMaxr</a>
 								<span class="text-gray-400 fw-semibold d-block">Professional camera for edge</span>
 							</div>
 							<!--end::Section-->
@@ -5964,7 +5975,7 @@
 						<div class="d-flex flex-column me-3">
 							<!--begin::Section-->
 							<div class="mb-3">
-								<a href="../../demo30/dist/apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">$D Printer</a>
+								<a href="#" class="text-gray-800 text-hover-primary fs-4 fw-bold">$D Printer</a>
 								<span class="text-gray-400 fw-semibold d-block">Manfactoring unique objekts</span>
 							</div>
 							<!--end::Section-->
@@ -6012,7 +6023,7 @@
 						<div class="d-flex flex-column me-3">
 							<!--begin::Section-->
 							<div class="mb-3">
-								<a href="../../demo30/dist/apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">MotionWire</a>
+								<a href="#" class="text-gray-800 text-hover-primary fs-4 fw-bold">MotionWire</a>
 								<span class="text-gray-400 fw-semibold d-block">Perfect animation tool</span>
 							</div>
 							<!--end::Section-->
@@ -6060,7 +6071,7 @@
 						<div class="d-flex flex-column me-3">
 							<!--begin::Section-->
 							<div class="mb-3">
-								<a href="../../demo30/dist/apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">Samsung</a>
+								<a href="#" class="text-gray-800 text-hover-primary fs-4 fw-bold">Samsung</a>
 								<span class="text-gray-400 fw-semibold d-block">Profile info,Timeline etc</span>
 							</div>
 							<!--end::Section-->
@@ -6108,7 +6119,7 @@
 						<div class="d-flex flex-column me-3">
 							<!--begin::Section-->
 							<div class="mb-3">
-								<a href="../../demo30/dist/apps/ecommerce/sales/details.html" class="text-gray-800 text-hover-primary fs-4 fw-bold">$D Printer</a>
+								<a href="#" class="text-gray-800 text-hover-primary fs-4 fw-bold">$D Printer</a>
 								<span class="text-gray-400 fw-semibold d-block">Manfactoring unique objekts</span>
 							</div>
 							<!--end::Section-->
@@ -6276,7 +6287,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo1/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo1/index.html" class="btn btn-sm btn-success shadow">Metronic Original</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Metronic Original</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6290,7 +6301,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo2/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo2/index.html" class="btn btn-sm btn-success shadow">SaaS App</a>
+												<a href="#" class="btn btn-sm btn-success shadow">SaaS App</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6304,7 +6315,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo6/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo6/index.html" class="btn btn-sm btn-success shadow">POS System</a>
+												<a href="#" class="btn btn-sm btn-success shadow">POS System</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6318,7 +6329,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo3/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo3/index.html" class="btn btn-sm btn-success shadow">New Trend</a>
+												<a href="#" class="btn btn-sm btn-success shadow">New Trend</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6332,7 +6343,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo8/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo8/index.html" class="btn btn-sm btn-success shadow">Analytics App</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Analytics App</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6346,7 +6357,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo10/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo10/index.html" class="btn btn-sm btn-success shadow">Project Grid</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Project Grid</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6360,7 +6371,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo11/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo11/index.html" class="btn btn-sm btn-success shadow">Finance Planner</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Finance Planner</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6374,7 +6385,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo4/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo4/index.html" class="btn btn-sm btn-success shadow">Jobs Site</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Jobs Site</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6388,7 +6399,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo27/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo27/index.html" class="btn btn-sm btn-success shadow">Databox Dashboard</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Databox Dashboard</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6402,7 +6413,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo20/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo20/index.html" class="btn btn-sm btn-success shadow">CRM Software</a>
+												<a href="#" class="btn btn-sm btn-success shadow">CRM Software</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6416,7 +6427,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo25/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo25/index.html" class="btn btn-sm btn-success shadow">User Guiding App</a>
+												<a href="#" class="btn btn-sm btn-success shadow">User Guiding App</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6430,7 +6441,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo30/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo30/index.html" class="btn btn-sm btn-success shadow">Sales Tracking App</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Sales Tracking App</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6444,7 +6455,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo23/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo23/index.html" class="btn btn-sm btn-success shadow">Member Dashboard</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Member Dashboard</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6458,7 +6469,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo29/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo29/index.html" class="btn btn-sm btn-success shadow">Project Workspace</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Project Workspace</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6472,7 +6483,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo14/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo14/index.html" class="btn btn-sm btn-success shadow">Project Workplace</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Project Workplace</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6486,7 +6497,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo24/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo24/index.html" class="btn btn-sm btn-success shadow">Helpdesk App</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Helpdesk App</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6500,7 +6511,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo26/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo26/index.html" class="btn btn-sm btn-success shadow">Planable App</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Planable App</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6514,7 +6525,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo7/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo7/index.html" class="btn btn-sm btn-success shadow">CRM Dashboard</a>
+												<a href="#" class="btn btn-sm btn-success shadow">CRM Dashboard</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6528,7 +6539,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo22/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo22/index.html" class="btn btn-sm btn-success shadow">Media Publisher</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Media Publisher</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6542,7 +6553,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo28/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo28/index.html" class="btn btn-sm btn-success shadow">eCommerce App</a>
+												<a href="#" class="btn btn-sm btn-success shadow">eCommerce App</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6556,7 +6567,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo19/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo19/index.html" class="btn btn-sm btn-success shadow">Reports Panel</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Reports Panel</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6570,7 +6581,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo9/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo9/index.html" class="btn btn-sm btn-success shadow">Sales Manager</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Sales Manager</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6584,7 +6595,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo13/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo13/index.html" class="btn btn-sm btn-success shadow">Classic Dashboard</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Classic Dashboard</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6598,7 +6609,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo16/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo16/index.html" class="btn btn-sm btn-success shadow">Podcast App</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Podcast App</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6612,7 +6623,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo18/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo18/index.html" class="btn btn-sm btn-success shadow">Goal Tracking</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Goal Tracking</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6626,7 +6637,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo21/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo21/index.html" class="btn btn-sm btn-success shadow">Monochrome App</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Monochrome App</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6640,7 +6651,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo12/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo12/index.html" class="btn btn-sm btn-success shadow">Data Analyzer</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Data Analyzer</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6654,7 +6665,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo17/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo17/index.html" class="btn btn-sm btn-success shadow">Events Scheduler</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Events Scheduler</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6668,7 +6679,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo15/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo15/index.html" class="btn btn-sm btn-success shadow">Crypto Planner</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Crypto Planner</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6682,7 +6693,7 @@
 												<img src="{{ asset('assets/media/preview/demos/demo5/light-ltr.png') }}" alt="demo" class="w-100" />
 											</div>
 											<div class="overlay-layer bg-dark bg-opacity-10">
-												<a href="https://preview.keenthemes.com/metronic8/demo5/index.html" class="btn btn-sm btn-success shadow">Support Forum</a>
+												<a href="#" class="btn btn-sm btn-success shadow">Support Forum</a>
 											</div>
 										</div>
 										<!--end::Demo-->
@@ -6840,7 +6851,7 @@
 								<!--begin::Wrapper-->
 								<div class="d-flex flex-column me-2 me-lg-5">
 									<!--begin::Title-->
-									<a href="https://preview.keenthemes.com/metronic8/demo30/layout-builder.html" class="text-dark text-hover-primary fw-bold fs-6 fs-lg-4 mb-1">Layout Builder</a>
+									<a href="#" class="text-dark text-hover-primary fw-bold fs-6 fs-lg-4 mb-1">Layout Builder</a>
 									<!--end::Title-->
 									<!--begin::Description-->
 									<div class="text-muted fw-semibold fs-7 fs-lg-6">Build your layout, preview it and export the HTML for server side integration.</div>
@@ -8959,27 +8970,10 @@
 		<script src="{{ asset('assets/plugins/global/plugins.bundle.js') }}"></script>
 		<script src="{{ asset('assets/js/scripts.bundle.js') }}"></script>
 		<!--end::Global Javascript Bundle-->
-		<!--begin::Vendors Javascript(used for this page only)-->
-		<script src="{{ asset('assets/plugins/custom/fullcalendar/fullcalendar.bundle.js') }}"></script>
-		<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/percent.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/radar.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/map.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/worldLow.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/continentsLow.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/usaLow.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZonesLow.js"></script>
-		<script src="https://cdn.amcharts.com/lib/5/geodata/worldTimeZoneAreasLow.js"></script>
-		<script src="{{ asset('assets/plugins/custom/datatables/datatables.bundle.js') }}"></script>
-		<!--end::Vendors Javascript-->
 		<!--begin::Custom Javascript(used for this page only)-->
-		<script src="{{ asset('assets/js/widgets.bundle.js') }}"></script>
-		<script src="{{ asset('assets/js/custom/widgets.js') }}"></script>
-		<script src="{{ asset('assets/js/custom/apps/chat/chat.js') }}"></script>
-		<script src="{{ asset('assets/js/custom/utilities/modals/upgrade-plan.js') }}"></script>
-		<script src="{{ asset('assets/js/custom/utilities/modals/users-search.js') }}"></script>
+
+    @yield('js')
+
 		<!--end::Custom Javascript-->
 		<!--end::Javascript-->
 	</body>

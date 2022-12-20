@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,8 +18,15 @@ Route::get('/', function () {
   return view('auth.login');
 });
 
-Route::get('/master', function () {
-  return view('layouts.master');
+Route::prefix('/')->group(function () {
+    Route::get('home', [DashboardController::class, 'dashboard'])->name('home');
+    Route::get('biodata', [DashboardController::class, 'biodata'])->name('biodata');
+    Route::get('about', [DashboardController::class, 'about'])->name('about');
+    Route::get('faq', [DashboardController::class, 'faq'])->name('faq');
+    Route::get('kontak', [DashboardController::class, 'kontak'])->name('kontak');
+    Route::get('listpeserta', [DashboardController::class, 'listpeserta'])->name('listpeserta');
+    Route::get('admin', [DashboardController::class, 'admin'])->name('admin');
+    Route::get('wizard', [DashboardController::class, 'wizard'])->name('wizard');
 });
 
 Route::middleware([

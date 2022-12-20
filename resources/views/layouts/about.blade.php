@@ -23,7 +23,7 @@
         <!--begin::Overlay-->
         <div class="overlay">
           <!--begin::Image-->
-          <img class="w-100 card-rounded" src="assets/media/stock/1600x800/img-1.jpg" alt="" />
+          <img class="w-100 card-rounded" src="assets/media/stock/img-1.jpg" alt="" />
           <!--end::Image-->
           <!--begin::Links-->
           <div class="overlay-layer card-rounded bg-dark bg-opacity-25">
