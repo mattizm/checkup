@@ -16,8 +16,19 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->string('role')->default('5');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            $table->string('id_ktp')->unique()->nullable();
+            $table->string('id_kk')->unique()->nullable();
+            $table->date('tanggal_lahir')->nullable();
+            $table->text('alamat')->nullable();
+            $table->string('no_hp')->nullable();
+            $table->string('balita')->nullable();
+            $table->string('pendapatan')->nullable();
+            $table->string('pendidikan')->nullable();
+            $table->string('pekerjaan')->nullable();
+            $table->string('keterangan')->nullable();
             $table->string('password');
             $table->rememberToken();
             $table->foreignId('current_team_id')->nullable();
