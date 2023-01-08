@@ -39,8 +39,7 @@
         <!--begin::Content-->
         <div class="w-md-400px">
           <!--begin::Form-->
-          <form class="form w-100" novalidate="novalidate" id="kt_sign_in_form"
-            data-kt-redirect-url="{{ route('login') }}" action="{{ route('login') }}">@csrf
+          <form class="form w-100" novalidate="novalidate" action="{{ route('login') }}" method="POST">@csrf
             <!--begin::Heading-->
             <div class="text-center mb-11">
               <!--begin::Title-->

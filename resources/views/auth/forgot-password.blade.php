@@ -39,8 +39,7 @@
         <!--begin::Content-->
         <div class="w-md-400px">
           <!--begin::Form-->
-          <form class="form w-100" novalidate="novalidate" id="kt_password_reset_form"
-            data-kt-redirect-url="../../demo30/dist/authentication/layouts/overlay/new-password.html" action="#">@csrf
+          <form class="form w-100" novalidate="novalidate" method="POST" action="{{ route('password.email') }}">@csrf
             <!--begin::Heading-->
             <div class="text-center mb-10">
               <!--begin::Title-->
@@ -60,7 +59,7 @@
             </div>
             <!--begin::Actions-->
             <div class="d-flex flex-wrap justify-content-center pb-lg-0">
-              <button type="button" id="kt_password_reset_submit" class="btn btn-primary me-4">
+              <button type="submit" id="kt_password_reset_submit" class="btn btn-primary me-4">
                 <!--begin::Indicator label-->
                 <span class="indicator-label">Submit</span>
                 <!--end::Indicator label-->
