@@ -2,14 +2,9 @@
 @section('title', 'Biodata Peserta')
 @section('js')
   <script>
-    $("#pickumur").daterangepicker({
-      singleDatePicker: true,
-      showDropdowns: true,
-      minYear: 1945,
-      maxYear: {{ \Carbon\Carbon::now()->format('Y') }},
-    }, function(start, end, label) {
-      var years = moment().diff(start, "years");
-      alert("Umur Anda " + years + " tahun!");
+    $("#pickumur").flatpickr({
+      maxDate: new Date(),
+      dateFormat: "d F Y"
     });
   </script>
 @endsection
@@ -27,53 +22,90 @@
   <!--begin::Content-->
   <div id="kt_account_settings_profile_details" class="collapse show">
     <!--begin::Form-->
-    <form action="{{ $user == null ? route('save.user') : route('update.user', $user->id) }}"
-      id="kt_account_profile_details_form" class="form" method="POST" enctype="multipart/form-data">@csrf
+    <form action="{{ $user == null ? route('save.user') : route('update.user', $user->id) }}" class="form" method="POST" enctype="multipart/form-data">@csrf
       <!--begin::Card body-->
       <div class="card-body border-top p-9">
         <!--begin::Input group-->
         <div class="row mb-6">
           <!--begin::Label-->
-          <label class="col-lg-4 col-form-label fw-semibold fs-6">Avatar</label>
+          <label class="col-lg-4 col-form-label fw-semibold fs-6">Upload Foto & KTP</label>
           <!--end::Label-->
-          <!--begin::Col-->
-          <div class="col-lg-8">
-            <!--begin::Image input-->
-            <div class="image-input image-input-outline" data-kt-image-input="true"
-              style="background-image: url('assets/media/svg/avatars/blank.svg')">
-              <!--begin::Preview existing avatar-->
-              <div class="image-input-wrapper w-125px h-125px"
-                style="background-image: url({{ asset('assets/media/svg/avatars/blank.svg') }})"></div>
-              <!--end::Preview existing avatar-->
-              <!--begin::Label-->
-              <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
-                <i class="bi bi-pencil-fill fs-7"></i>
-                <!--begin::Inputs-->
-                <input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
-                <input type="hidden" name="avatar_remove" />
-                <!--end::Inputs-->
-              </label>
-              <!--end::Label-->
-              <!--begin::Cancel-->
-              <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
-                <i class="bi bi-x fs-2"></i>
-              </span>
-              <!--end::Cancel-->
-              <!--begin::Remove-->
-              <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
-                <i class="bi bi-x fs-2"></i>
-              </span>
-              <!--end::Remove-->
+          <div class="row">
+            <div class="col-lg-6 fv-row">
+              <!--begin::Image input-->
+              <div class="image-input image-input-outline" data-kt-image-input="true"
+                style="background-image: url('assets/media/svg/avatars/blank.svg')">
+                <!--begin::Preview existing avatar-->
+                <div class="image-input-wrapper w-125px h-125px"
+                  style="background-image: url({{ $user->profile_photo_path ? asset('avatar/' . $user->profile_photo_path) : asset('assets/media/svg/avatars/blank.svg') }})">
+                </div>
+                <!--end::Preview existing avatar-->
+                <!--begin::Label-->
+                <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                  data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
+                  <i class="bi bi-pencil-fill fs-7"></i>
+                  <!--begin::Inputs-->
+                  <input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
+                  <input type="hidden" name="avatar_remove" />
+                  <!--end::Inputs-->
+                </label>
+                <!--end::Label-->
+                <!--begin::Cancel-->
+                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                  data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+                  <i class="bi bi-x fs-2"></i>
+                </span>
+                <!--end::Cancel-->
+                <!--begin::Remove-->
+                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                  data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                  <i class="bi bi-x fs-2"></i>
+                </span>
+                <!--end::Remove-->
+              </div>
+              <!--end::Image input-->
+              <!--begin::Hint-->
+              <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+              <!--end::Hint-->
             </div>
-            <!--end::Image input-->
-            <!--begin::Hint-->
-            <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
-            <!--end::Hint-->
+            <div class="col-lg-6 fv-row">
+              <!--begin::Image input-->
+              <div class="image-input image-input-outline" data-kt-image-input="true"
+                style="background-image: url('assets/media/svg/avatars/blank.svg')">
+                <!--begin::Preview existing avatar-->
+                <div class="image-input-wrapper w-125px h-125px"
+                  style="background-image: url({{ $user->ktp ? asset('ktp/' . $user->ktp) : asset('assets/media/svg/avatars/blank.svg') }})">
+                </div>
+                <!--end::Preview existing avatar-->
+                <!--begin::Label-->
+                <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                  data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change ktp">
+                  <i class="bi bi-pencil-fill fs-7"></i>
+                  <!--begin::Inputs-->
+                  <input type="file" name="ktp" accept=".png, .jpg, .jpeg" />
+                  <input type="hidden" name="ktp_remove" />
+                  <!--end::Inputs-->
+                </label>
+                <!--end::Label-->
+                <!--begin::Cancel-->
+                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                  data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+                  <i class="bi bi-x fs-2"></i>
+                </span>
+                <!--end::Cancel-->
+                <!--begin::Remove-->
+                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                  data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                  <i class="bi bi-x fs-2"></i>
+                </span>
+                <!--end::Remove-->
+              </div>
+              <!--end::Image input-->
+              <!--begin::Hint-->
+              <div class="form-text">KTP Harus format: png, jpg, jpeg.</div>
+              <!--end::Hint-->
+            </div>
           </div>
-          <!--end::Col-->
         </div>
         <!--end::Input group-->
         <div class="row mb-6">
@@ -143,33 +175,6 @@
         <!--begin::Input group-->
         <div class="row mb-6">
           <!--begin::Label-->
-          <label class="col-lg-4 col-form-label required fw-semibold fs-6">Password</label>
-          <!--end::Label-->
-          <!--begin::Col-->
-          <div class="col-lg-8">
-            <!--begin::Row-->
-            <div class="row">
-              <!--begin::Col-->
-              <div class="col-lg-6 fv-row">
-                <input type="password" name="password"
-                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="Password" />
-              </div>
-              <!--end::Col-->
-              <!--begin::Col-->
-              <div class="col-lg-6 fv-row">
-                <input type="password" name="password_confirmation"
-                  class="form-control form-control-lg form-control-solid" placeholder="Konfirmasi Password" />
-              </div>
-              <!--end::Col-->
-            </div>
-            <!--end::Row-->
-          </div>
-          <!--end::Col-->
-        </div>
-        <!--end::Input group-->
-        <!--begin::Input group-->
-        <div class="row mb-6">
-          <!--begin::Label-->
           <label class="col-lg-4 col-form-label fw-semibold fs-6">
             <span class="required">Nomor HP</span>
             <i class="fas fa-exclamation-circle ms-1 fs-7" data-bs-toggle="tooltip"
@@ -194,13 +199,19 @@
             <!--begin::Row-->
             <div class="row">
               <!--begin::Col-->
-              <div class="col-lg-6 fv-row">
-                <input name="tanggal_lahir" value="{{ $user->tanggal_lahir ?? old('tanggal_lahir') }}"
+              <div class="col-lg-5 fv-row">
+                <input name="tempat_lahir" value="{{ $user->tempat_lahir ?? old('tempat_lahir') }}"
+                  class="form-control form-control-solid" placeholder="Tempat Lahir Anda" />
+              </div>
+              <!--end::Col-->
+              <!--begin::Col-->
+              <div class="col-lg-4 fv-row">
+                <input name="tanggal_lahir" value="{{ \Carbon\Carbon::parse($user->tanggal_lahir)->format('d F Y') ?? old('tanggal_lahir') }}"
                   class="form-control form-control-solid" placeholder="Pilih Tanggal Lahir Anda" id="pickumur" />
               </div>
               <!--end::Col-->
               <!--begin::Col-->
-              <div class="col-lg-6 fv-row">
+              <div class="col-lg-3 fv-row">
                 <input type="text" name="balita" class="form-control form-control-lg form-control-solid"
                   placeholder="Jumlah Balita" value="{{ $user->balita ?? old('balita') }}" />
               </div>
@@ -237,7 +248,7 @@
               <div class="col-lg-6 fv-row">
                 <select name="pendidikan" aria-label="Pilih Pendidikan" data-control="select2"
                   data-placeholder="Pilih Pendidikan.." class="form-select form-select-solid form-select-lg">
-                  <option value="">Pilih Pendidikan</option>
+                  <option selected disabled>Pilih Pendidikan</option>
                   @foreach (config('matt.pendidikan') as $key => $value)
                     <option {{ isset($user->pendidikan) == $key ? 'checked' : '' }} value="{{ $key }}">
                       {{ $value }}</option>
@@ -250,7 +261,7 @@
                 <div class="col-lg-6 fv-row">
                   <select name="pekerjaan" aria-label="Pilih Pekerjaan" data-control="select2"
                     data-placeholder="Pilih Pekerjaan.." class="form-select form-select-solid form-select-lg">
-                    <option value="">Pilih pekerjaan</option>
+                    <option selected disabled>Pilih pekerjaan</option>
                     @foreach (config('matt.pekerjaan') as $key => $value)
                       <option {{ isset($user->pekerjaan) == $key ? 'checked' : '' }} value="{{ $key }}">
                         {{ $value }}</option>
@@ -273,7 +284,34 @@
           <!--begin::Col-->
           <div class="col-lg-8 fv-row">
             <input type="text" name="keterangan" class="form-control form-control-lg form-control-solid"
-              placeholder="Masukan Keterangan" value="{{ $user->keterangan ?? old('keterangan') }}" />
+              placeholder="Kosongkan jika tidak ada keterangan peserta" value="{{ $user->keterangan ?? old('keterangan') }}" />
+          </div>
+          <!--end::Col-->
+        </div>
+        <!--end::Input group-->
+        <!--begin::Input group-->
+        <div class="row mb-6">
+          <!--begin::Label-->
+          <label class="col-lg-4 col-form-label required fw-semibold fs-6">Password</label>
+          <!--end::Label-->
+          <!--begin::Col-->
+          <div class="col-lg-8">
+            <!--begin::Row-->
+            <div class="row">
+              <!--begin::Col-->
+              <div class="col-lg-6 fv-row">
+                <input type="password" name="password"
+                  class="form-control form-control-lg form-control-solid mb-3 mb-lg-0" placeholder="Password" />
+              </div>
+              <!--end::Col-->
+              <!--begin::Col-->
+              <div class="col-lg-6 fv-row">
+                <input type="password" name="password_confirmation"
+                  class="form-control form-control-lg form-control-solid" placeholder="Konfirmasi Password" />
+              </div>
+              <!--end::Col-->
+            </div>
+            <!--end::Row-->
           </div>
           <!--end::Col-->
         </div>

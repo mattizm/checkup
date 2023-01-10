@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AnakController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -48,9 +49,24 @@ Route::prefix('/')->group(function () {
 });
 
 Route::prefix('user')->group(function () {
+  Route::get('', [UserController::class, 'user'])->name('user');
   Route::get('create', [UserController::class, 'createuser'])->name('create.user');
   Route::post('save', [UserController::class, 'saveuser'])->name('save.user');
-  Route::post('update', [UserController::class, 'updateuser'])->name('update.user');
+  Route::get('edit/{id}', [UserController::class, 'edituser'])->name('edit.user');
+  Route::post('update/{id}', [UserController::class, 'updateuser'])->name('update.user');
+});
+
+Route::prefix('client')->group(function () {
+  Route::get('', [UserController::class, 'client'])->name('client');
+  Route::get('edit', [UserController::class, 'editclient'])->name('edit.client');
+  Route::post('update', [UserController::class, 'updateclient'])->name('update.client');
+});
+
+Route::prefix('anak')->group(function () {
+  Route::get('', [AnakController::class, 'createanak'])->name('create.anak');
+  Route::post('save', [AnakController::class, 'saveanak'])->name('save.anak');
+  Route::get('edit', [AnakController::class, 'editanak'])->name('edit.anak');
+  Route::post('update', [AnakController::class, 'updateanak'])->name('update.anak');
 });
 
 Route::middleware([

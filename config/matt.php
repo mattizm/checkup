@@ -1,15 +1,28 @@
 <?php
 return [
-  'nama_app' => 'Pregnant Medical Checkup',
+  'nama_app' => 'Bekali Kendali',
   'role'     => [
     '1' => 'Super Admin',
     '2' => 'Admin',
     '3' => 'Reviewer',
     '5' => 'Pasien'
   ],
+  'darah' => [
+    '0' => 'Tidak tahu',
+    '1' => 'A',
+    '2' => 'B',
+    '3' => 'O',
+    '4' => 'AB',
+  ],
+  'jenis_kelamin' => [
+    '1' => 'Laki-laki',
+    '2' => 'Perempuan',
+  ],
   'status' => [
-    '1' => 'Aktif',
-    '2' => 'Tidak Aktif'
+    '1' => 'Tidak Aktif',
+    '2' => 'Terdaftar',
+    '3' => 'Aktif',
+    '4' => 'Lengkap',
   ],
   'pekerjaan' => [
     '1' => 'PNS',
