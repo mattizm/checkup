@@ -1,0 +1,12 @@
+<table>
+  <thead>
+    <th>No</th>
+    <th>Nama</th>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Qaw</td>
+    </tr>
+  </tbody>
+</table>

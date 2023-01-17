@@ -420,22 +420,22 @@
                   </div>
                   <div class="menu-item">
                     <!--begin:Menu link-->
-                    <a class="menu-link" href="{{ route('home') }}">
-                      <span class="menu-title">Home</span>
+                    <a class="menu-link" href="{{ route('user') }}">
+                      <span class="menu-title">Data Ibu</span>
                     </a>
                     <!--end:Menu link-->
                   </div>
                   <div class="menu-item">
                     <!--begin:Menu link-->
-                    <a class="menu-link" href="{{ route('admin') }}">
-                      <span class="menu-title">Admin</span>
+                    <a class="menu-link" href="{{ route('anak') }}">
+                      <span class="menu-title">Data Anak</span>
                     </a>
                     <!--end:Menu link-->
                   </div>
                   <div class="menu-item">
                     <!--begin:Menu link-->
-                    <a class="menu-link" href="{{ route('listpeserta') }}">
-                      <span class="menu-title">List Peserta</span>
+                    <a class="menu-link" href="{{ route('pengaturan') }}">
+                      <span class="menu-title">Pengaturan</span>
                     </a>
                     <!--end:Menu link-->
                   </div>

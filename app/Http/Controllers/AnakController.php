@@ -18,13 +18,34 @@ class AnakController extends Controller
     $this->middleware('role:1', ['only' => ['user', 'createuser', 'saveuser', 'edituser', 'updateuser']]);
   }
 
+  public function anak()
+  {
+    $childs = Anak::all();
+    return view('data.dataanak', compact('childs'));
+  }
+
+  public function lihatanak($id)
+  {
+    $childs = Anak::where('user_id', $id)->get();
+    return view('data.dataanak', compact('childs'));
+  }
+
   public function createanak()
   {
     $anak = null;
     return view('peserta.createanak', compact('anak'));
   }
 
-  public function saveanak(Request $request, Anak $anak)
+  public function editanak($id)
+  {
+    $anak = Anak::findOrFail($id);
+    if ($anak->user_id != Auth::id()) {
+      abort('403');
+    }
+    return view('peserta.createanak', compact('anak'));
+  }
+
+  public function saveanak(Request $request)
   {
     $request->validate([
       'avatar'         => 'nullable|image|mimes:png,jpg|max:400',
@@ -40,7 +61,7 @@ class AnakController extends Controller
       'keterangan'     => 'nullable|string',
     ]);
 
-    $anak                = new Anak;
+    $anak                = New Anak;
     $anak->user_id       = Auth::id();
     $anak->nama          = Str::title($request->nama);
     $anak->tempat_lahir  = $request->tempat_lahir;

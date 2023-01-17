@@ -20,8 +20,8 @@ class UserController extends Controller
 
   public function client()
   {
-    $user = null;
-    return view('peserta.profilclient', compact('user'));
+    $user = User::find(Auth::id());
+    return view('peserta.showuser', compact('user'));
   }
 
   public function editclient(User $user)
@@ -37,7 +37,7 @@ class UserController extends Controller
       'ktp'           => 'required|image|mimes:png,jpg|max:400',
       'name'          => 'required|string',
       'email'         => 'required|email',
-      'password'      => 'required|confirmed',
+      'password'      => 'nullable|confirmed',
       'id_ktp'        => 'required|numeric|unique:users,id_ktp,' . Auth::id() . '',
       'id_kk'         => 'required|numeric|unique:users,id_kk,' . Auth::id() . '',
       'no_hp'         => 'required|numeric',
@@ -55,7 +55,9 @@ class UserController extends Controller
     $user->status        = 3;
     $user->name          = Str::title($request->name);
     $user->email         = $request->email;
-    $user->password      = Hash::make($request->password);
+    if ($request->hasInput('password')) {
+      $user->password      = Hash::make($request->password);
+    }
     $user->id_ktp        = $request->id_ktp;
     $user->id_kk         = $request->id_kk;
     $user->no_hp         = $request->no_hp;
@@ -92,10 +94,19 @@ class UserController extends Controller
   }
 
   // ---------------------ADMIN AREA --------------------- //
-  public function user()
+
+  public function user(Request $request, User $user)
   {
-    $user = null;
-    return view('peserta.profiladmin', compact('user'));
+    $users = $user->paginate();
+    $cari = $request->cari;
+    $tahun = $request->tahun;
+    return view('data.dataibu', compact('users', 'cari', 'tahun'));
+  }
+
+  public function showuser($id)
+  {
+    $user = User::find($id);
+    return view('peserta.showuser', compact('user'));
   }
 
   public function createuser()
@@ -117,7 +128,7 @@ class UserController extends Controller
       'ktp'           => 'required|image|mimes:png,jpg|max:400',
       'name'          => 'required|string',
       'email'         => 'required|email',
-      'password'      => 'required|confirmed',
+      'password'      => 'nullable|confirmed',
       'id_ktp'        => 'required|numeric|unique:users,id_ktp',
       'id_kk'         => 'required|numeric|unique:users,id_kk',
       'no_hp'         => 'required|numeric',
@@ -134,7 +145,9 @@ class UserController extends Controller
     $user->status            = 3;
     $user->name              = Str::title($request->name);
     $user->email             = $request->email;
-    $user->password          = Hash::make($request->password);
+    if ($request->hasInput('password')) {
+      $user->password          = Hash::make($request->password);
+    }
     $user->id_ktp            = $request->id_ktp;
     $user->id_kk             = $request->id_kk;
     $user->no_hp             = $request->no_hp;
@@ -176,7 +189,7 @@ class UserController extends Controller
       'ktp'           => 'required|image|mimes:png,jpg|max:400',
       'name'          => 'required|string',
       'email'         => 'required|email',
-      'password'      => 'required|confirmed',
+      'password'      => 'nullable|confirmed',
       'id_ktp'        => 'required|numeric|unique:users,id_ktp,' . $user->id . '',
       'id_kk'         => 'required|numeric|unique:users,id_kk,' . $user->id . '',
       'no_hp'         => 'required|numeric',
@@ -193,7 +206,9 @@ class UserController extends Controller
     $user                = $user->find($id);
     $user->name          = Str::title($request->name);
     $user->email         = $request->email;
-    $user->password      = Hash::make($request->password);
+    if ($request->hasInput('password')) {
+      $user->password      = Hash::make($request->password);
+    }
     $user->id_ktp        = $request->id_ktp;
     $user->id_kk         = $request->id_kk;
     $user->no_hp         = $request->no_hp;

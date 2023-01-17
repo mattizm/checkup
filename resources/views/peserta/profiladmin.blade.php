@@ -22,7 +22,8 @@
   <!--begin::Content-->
   <div id="kt_account_settings_profile_details" class="collapse show">
     <!--begin::Form-->
-    <form action="{{ $user == null ? route('save.user') : route('update.user', $user->id) }}" class="form" method="POST" enctype="multipart/form-data">@csrf
+    <form action="{{ $user == null ? route('save.user') : route('update.user', $user->id) }}" class="form"
+      method="POST" enctype="multipart/form-data">@csrf
       <!--begin::Card body-->
       <div class="card-body border-top p-9">
         <!--begin::Input group-->
@@ -30,80 +31,82 @@
           <!--begin::Label-->
           <label class="col-lg-4 col-form-label fw-semibold fs-6">Upload Foto & KTP</label>
           <!--end::Label-->
-          <div class="row">
-            <div class="col-lg-6 fv-row">
-              <!--begin::Image input-->
-              <div class="image-input image-input-outline" data-kt-image-input="true"
-                style="background-image: url('assets/media/svg/avatars/blank.svg')">
-                <!--begin::Preview existing avatar-->
-                <div class="image-input-wrapper w-125px h-125px"
-                  style="background-image: url({{ $user->profile_photo_path ? asset('avatar/' . $user->profile_photo_path) : asset('assets/media/svg/avatars/blank.svg') }})">
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-lg-6 fv-row">
+                <!--begin::Image input-->
+                <div class="image-input image-input-outline" data-kt-image-input="true"
+                  style="background-image: url('assets/media/svg/avatars/blank.svg')">
+                  <!--begin::Preview existing avatar-->
+                  <div class="image-input-wrapper w-125px h-125px"
+                    style="background-image: url({{ $user->profile_photo_path ? asset('avatar/' . $user->profile_photo_path) : asset('assets/media/svg/avatars/blank.svg') }})">
+                  </div>
+                  <!--end::Preview existing avatar-->
+                  <!--begin::Label-->
+                  <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                    data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
+                    <i class="bi bi-pencil-fill fs-7"></i>
+                    <!--begin::Inputs-->
+                    <input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
+                    <input type="hidden" name="avatar_remove" />
+                    <!--end::Inputs-->
+                  </label>
+                  <!--end::Label-->
+                  <!--begin::Cancel-->
+                  <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                    data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+                    <i class="bi bi-x fs-2"></i>
+                  </span>
+                  <!--end::Cancel-->
+                  <!--begin::Remove-->
+                  <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                    data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                    <i class="bi bi-x fs-2"></i>
+                  </span>
+                  <!--end::Remove-->
                 </div>
-                <!--end::Preview existing avatar-->
-                <!--begin::Label-->
-                <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                  data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
-                  <i class="bi bi-pencil-fill fs-7"></i>
-                  <!--begin::Inputs-->
-                  <input type="file" name="avatar" accept=".png, .jpg, .jpeg" />
-                  <input type="hidden" name="avatar_remove" />
-                  <!--end::Inputs-->
-                </label>
-                <!--end::Label-->
-                <!--begin::Cancel-->
-                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                  data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
-                  <i class="bi bi-x fs-2"></i>
-                </span>
-                <!--end::Cancel-->
-                <!--begin::Remove-->
-                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                  data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
-                  <i class="bi bi-x fs-2"></i>
-                </span>
-                <!--end::Remove-->
+                <!--end::Image input-->
+                <!--begin::Hint-->
+                <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
+                <!--end::Hint-->
               </div>
-              <!--end::Image input-->
-              <!--begin::Hint-->
-              <div class="form-text">Allowed file types: png, jpg, jpeg.</div>
-              <!--end::Hint-->
-            </div>
-            <div class="col-lg-6 fv-row">
-              <!--begin::Image input-->
-              <div class="image-input image-input-outline" data-kt-image-input="true"
-                style="background-image: url('assets/media/svg/avatars/blank.svg')">
-                <!--begin::Preview existing avatar-->
-                <div class="image-input-wrapper w-125px h-125px"
-                  style="background-image: url({{ $user->ktp ? asset('ktp/' . $user->ktp) : asset('assets/media/svg/avatars/blank.svg') }})">
+              <div class="col-lg-6 fv-row">
+                <!--begin::Image input-->
+                <div class="image-input image-input-outline" data-kt-image-input="true"
+                  style="background-image: url('assets/media/svg/avatars/blank.svg')">
+                  <!--begin::Preview existing avatar-->
+                  <div class="image-input-wrapper w-125px h-125px"
+                    style="background-image: url({{ $user->ktp ? asset('ktp/' . $user->ktp) : asset('assets/media/svg/avatars/blank.svg') }})">
+                  </div>
+                  <!--end::Preview existing avatar-->
+                  <!--begin::Label-->
+                  <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                    data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change ktp">
+                    <i class="bi bi-pencil-fill fs-7"></i>
+                    <!--begin::Inputs-->
+                    <input type="file" name="ktp" accept=".png, .jpg, .jpeg" />
+                    <input type="hidden" name="ktp_remove" />
+                    <!--end::Inputs-->
+                  </label>
+                  <!--end::Label-->
+                  <!--begin::Cancel-->
+                  <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                    data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
+                    <i class="bi bi-x fs-2"></i>
+                  </span>
+                  <!--end::Cancel-->
+                  <!--begin::Remove-->
+                  <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
+                    data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
+                    <i class="bi bi-x fs-2"></i>
+                  </span>
+                  <!--end::Remove-->
                 </div>
-                <!--end::Preview existing avatar-->
-                <!--begin::Label-->
-                <label class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                  data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change ktp">
-                  <i class="bi bi-pencil-fill fs-7"></i>
-                  <!--begin::Inputs-->
-                  <input type="file" name="ktp" accept=".png, .jpg, .jpeg" />
-                  <input type="hidden" name="ktp_remove" />
-                  <!--end::Inputs-->
-                </label>
-                <!--end::Label-->
-                <!--begin::Cancel-->
-                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                  data-kt-image-input-action="cancel" data-bs-toggle="tooltip" title="Cancel avatar">
-                  <i class="bi bi-x fs-2"></i>
-                </span>
-                <!--end::Cancel-->
-                <!--begin::Remove-->
-                <span class="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow"
-                  data-kt-image-input-action="remove" data-bs-toggle="tooltip" title="Remove avatar">
-                  <i class="bi bi-x fs-2"></i>
-                </span>
-                <!--end::Remove-->
+                <!--end::Image input-->
+                <!--begin::Hint-->
+                <div class="form-text">KTP Harus format: png, jpg, jpeg.</div>
+                <!--end::Hint-->
               </div>
-              <!--end::Image input-->
-              <!--begin::Hint-->
-              <div class="form-text">KTP Harus format: png, jpg, jpeg.</div>
-              <!--end::Hint-->
             </div>
           </div>
         </div>
@@ -206,7 +209,8 @@
               <!--end::Col-->
               <!--begin::Col-->
               <div class="col-lg-4 fv-row">
-                <input name="tanggal_lahir" value="{{ \Carbon\Carbon::parse($user->tanggal_lahir)->format('d F Y') ?? old('tanggal_lahir') }}"
+                <input name="tanggal_lahir"
+                  value="{{ \Carbon\Carbon::parse($user->tanggal_lahir)->format('d F Y') ?? old('tanggal_lahir') }}"
                   class="form-control form-control-solid" placeholder="Pilih Tanggal Lahir Anda" id="pickumur" />
               </div>
               <!--end::Col-->
@@ -284,7 +288,8 @@
           <!--begin::Col-->
           <div class="col-lg-8 fv-row">
             <input type="text" name="keterangan" class="form-control form-control-lg form-control-solid"
-              placeholder="Kosongkan jika tidak ada keterangan peserta" value="{{ $user->keterangan ?? old('keterangan') }}" />
+              placeholder="Kosongkan jika tidak ada keterangan peserta"
+              value="{{ $user->keterangan ?? old('keterangan') }}" />
           </div>
           <!--end::Col-->
         </div>
